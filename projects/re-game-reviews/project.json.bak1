@@ -125,6 +125,1305 @@
    "timestamp": "2026-07-15T10:51:57+02:00",
    "duration_s": 3.92,
    "annotator": "RF"
+  },
+  "r5": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:05:12+02:00",
+   "duration_s": 7.17,
+   "annotator": "RF"
+  },
+  "r6": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:05:15+02:00",
+   "duration_s": 3.58,
+   "annotator": "RF"
+  },
+  "r7": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:05:17+02:00",
+   "duration_s": 1.55,
+   "annotator": "RF"
+  },
+  "r8": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:05:19+02:00",
+   "duration_s": 2.88,
+   "annotator": "RF"
+  },
+  "r9": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:05:22+02:00",
+   "duration_s": 3.31,
+   "annotator": "RF"
+  },
+  "r10": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:05:24+02:00",
+   "duration_s": 2.07,
+   "annotator": "RF"
+  },
+  "r11": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:05:35+02:00",
+   "duration_s": 8.46,
+   "annotator": "RF"
+  },
+  "r12": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:12:19+02:00",
+   "duration_s": 197.57,
+   "annotator": "RF"
+  },
+  "r13": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:12:47+02:00",
+   "duration_s": 26.42,
+   "annotator": "RF"
+  },
+  "r14": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:12:50+02:00",
+   "duration_s": 3.43,
+   "annotator": "RF"
+  },
+  "r15": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:14:03+02:00",
+   "duration_s": 73.18,
+   "annotator": "RF"
+  },
+  "r16": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:14:11+02:00",
+   "duration_s": 9.53,
+   "annotator": "RF"
+  },
+  "r17": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:14:36+02:00",
+   "duration_s": 23.07,
+   "annotator": "RF"
+  },
+  "r18": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:14:40+02:00",
+   "duration_s": 4.77,
+   "annotator": "RF"
+  },
+  "r19": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:14:45+02:00",
+   "duration_s": 5.58,
+   "annotator": "RF"
+  },
+  "r20": {
+   "labels": [],
+   "levels": {},
+   "status": "discuss",
+   "comment": "",
+   "timestamp": "2026-07-15T11:15:32+02:00",
+   "duration_s": 44.35,
+   "annotator": "RF"
+  },
+  "r21": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:15:49+02:00",
+   "duration_s": 18.62,
+   "annotator": "RF"
+  },
+  "r22": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:15:51+02:00",
+   "duration_s": 2.41,
+   "annotator": "RF"
+  },
+  "r23": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:16:21+02:00",
+   "duration_s": 29.17,
+   "annotator": "RF"
+  },
+  "r24": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:16:55+02:00",
+   "duration_s": 34.42,
+   "annotator": "RF"
+  },
+  "r25": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:16:57+02:00",
+   "duration_s": 1.56,
+   "annotator": "RF"
+  },
+  "r26": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:16:59+02:00",
+   "duration_s": 2.55,
+   "annotator": "RF"
+  },
+  "r27": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:17:36+02:00",
+   "duration_s": 36.94,
+   "annotator": "RF"
+  },
+  "r28": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:17:37+02:00",
+   "duration_s": 1.79,
+   "annotator": "RF"
+  },
+  "r29": {
+   "labels": [],
+   "levels": {},
+   "status": "invalid",
+   "comment": "",
+   "timestamp": "2026-07-15T11:17:40+02:00",
+   "duration_s": 2.74,
+   "annotator": "RF"
+  },
+  "r30": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:17:41+02:00",
+   "duration_s": 1.36,
+   "annotator": "RF"
+  },
+  "r31": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:17:42+02:00",
+   "duration_s": 1.2,
+   "annotator": "RF"
+  },
+  "r32": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:17:51+02:00",
+   "duration_s": 5.95,
+   "annotator": "RF"
+  },
+  "r33": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:17:56+02:00",
+   "duration_s": 5.95,
+   "annotator": "RF"
+  },
+  "r34": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:18:02+02:00",
+   "duration_s": 6.32,
+   "annotator": "RF"
+  },
+  "r35": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:18:08+02:00",
+   "duration_s": 5.88,
+   "annotator": "RF"
+  },
+  "r36": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:18:10+02:00",
+   "duration_s": 2.9,
+   "annotator": "RF"
+  },
+  "r37": {
+   "labels": [],
+   "levels": {},
+   "status": "discuss",
+   "comment": "",
+   "timestamp": "2026-07-15T11:18:19+02:00",
+   "duration_s": 9.9,
+   "annotator": "RF"
+  },
+  "r38": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:18:31+02:00",
+   "duration_s": 9.79,
+   "annotator": "RF"
+  },
+  "r39": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:18:55+02:00",
+   "duration_s": 26.09,
+   "annotator": "RF"
+  },
+  "r40": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:18:57+02:00",
+   "duration_s": 1.62,
+   "annotator": "RF"
+  },
+  "r41": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:03+02:00",
+   "duration_s": 3.24,
+   "annotator": "RF"
+  },
+  "r42": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:15+02:00",
+   "duration_s": 13.27,
+   "annotator": "RF"
+  },
+  "r43": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:16+02:00",
+   "duration_s": 1.29,
+   "annotator": "RF"
+  },
+  "r44": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:23+02:00",
+   "duration_s": 7.65,
+   "annotator": "RF"
+  },
+  "r45": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:31+02:00",
+   "duration_s": 8.88,
+   "annotator": "RF"
+  },
+  "r46": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:36+02:00",
+   "duration_s": 1.75,
+   "annotator": "RF"
+  },
+  "r47": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:41+02:00",
+   "duration_s": 5.46,
+   "annotator": "RF"
+  },
+  "r48": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:44+02:00",
+   "duration_s": 3.58,
+   "annotator": "RF"
+  },
+  "r49": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:46+02:00",
+   "duration_s": 2.0,
+   "annotator": "RF"
+  },
+  "r50": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:19:50+02:00",
+   "duration_s": 4.1,
+   "annotator": "RF"
+  },
+  "r51": {
+   "labels": [],
+   "levels": {},
+   "status": "discuss",
+   "comment": "",
+   "timestamp": "2026-07-15T11:20:12+02:00",
+   "duration_s": 21.13,
+   "annotator": "RF"
+  },
+  "r52": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:20:14+02:00",
+   "duration_s": 1.66,
+   "annotator": "RF"
+  },
+  "r53": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:20:20+02:00",
+   "duration_s": 6.54,
+   "annotator": "RF"
+  },
+  "r54": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:20:47+02:00",
+   "duration_s": 12.59,
+   "annotator": "RF"
+  },
+  "r55": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:20:49+02:00",
+   "duration_s": 1.8,
+   "annotator": "RF"
+  },
+  "r56": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:20:53+02:00",
+   "duration_s": 4.57,
+   "annotator": "RF"
+  },
+  "r57": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:20:57+02:00",
+   "duration_s": 4.67,
+   "annotator": "RF"
+  },
+  "r58": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:21:17+02:00",
+   "duration_s": 22.04,
+   "annotator": "RF"
+  },
+  "r59": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:22:24+02:00",
+   "duration_s": 65.89,
+   "annotator": "RF"
+  },
+  "r60": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:22:27+02:00",
+   "duration_s": 4.09,
+   "annotator": "RF"
+  },
+  "r61": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:22:39+02:00",
+   "duration_s": 8.93,
+   "annotator": "RF"
+  },
+  "r62": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:22:42+02:00",
+   "duration_s": 4.0,
+   "annotator": "RF"
+  },
+  "r63": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:22:45+02:00",
+   "duration_s": 2.63,
+   "annotator": "RF"
+  },
+  "r64": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:22:52+02:00",
+   "duration_s": 7.52,
+   "annotator": "RF"
+  },
+  "r65": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:22:58+02:00",
+   "duration_s": 6.98,
+   "annotator": "RF"
+  },
+  "r66": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:23:01+02:00",
+   "duration_s": 2.72,
+   "annotator": "RF"
+  },
+  "r67": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:23:13+02:00",
+   "duration_s": 9.94,
+   "annotator": "RF"
+  },
+  "r68": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:23:27+02:00",
+   "duration_s": 15.62,
+   "annotator": "RF"
+  },
+  "r69": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:23:36+02:00",
+   "duration_s": 10.3,
+   "annotator": "RF"
+  },
+  "r70": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:23:47+02:00",
+   "duration_s": 7.86,
+   "annotator": "RF"
+  },
+  "r71": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:23:48+02:00",
+   "duration_s": 1.14,
+   "annotator": "RF"
+  },
+  "r72": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:23:51+02:00",
+   "duration_s": 3.48,
+   "annotator": "RF"
+  },
+  "r73": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:24:18+02:00",
+   "duration_s": 26.9,
+   "annotator": "RF"
+  },
+  "r74": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:24:24+02:00",
+   "duration_s": 5.88,
+   "annotator": "RF"
+  },
+  "r75": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:24:27+02:00",
+   "duration_s": 3.44,
+   "annotator": "RF"
+  },
+  "r76": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:24:44+02:00",
+   "duration_s": 18.43,
+   "annotator": "RF"
+  },
+  "r77": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:24:55+02:00",
+   "duration_s": 8.95,
+   "annotator": "RF"
+  },
+  "r78": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:24:58+02:00",
+   "duration_s": 2.71,
+   "annotator": "RF"
+  },
+  "r79": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:25:01+02:00",
+   "duration_s": 3.33,
+   "annotator": "RF"
+  },
+  "r80": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:25:04+02:00",
+   "duration_s": 4.22,
+   "annotator": "RF"
+  },
+  "r81": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:25:15+02:00",
+   "duration_s": 11.71,
+   "annotator": "RF"
+  },
+  "r82": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:25:17+02:00",
+   "duration_s": 2.42,
+   "annotator": "RF"
+  },
+  "r83": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:25:30+02:00",
+   "duration_s": 10.24,
+   "annotator": "RF"
+  },
+  "r84": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:25:36+02:00",
+   "duration_s": 6.74,
+   "annotator": "RF"
+  },
+  "r85": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:25:38+02:00",
+   "duration_s": 2.5,
+   "annotator": "RF"
+  },
+  "r86": {
+   "labels": [],
+   "levels": {},
+   "status": "discuss",
+   "comment": "",
+   "timestamp": "2026-07-15T11:26:21+02:00",
+   "duration_s": 43.64,
+   "annotator": "RF"
+  },
+  "r87": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:26:51+02:00",
+   "duration_s": 28.97,
+   "annotator": "RF"
+  },
+  "r88": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:26:57+02:00",
+   "duration_s": 6.5,
+   "annotator": "RF"
+  },
+  "r89": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:00+02:00",
+   "duration_s": 3.22,
+   "annotator": "RF"
+  },
+  "r90": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:10+02:00",
+   "duration_s": 10.88,
+   "annotator": "RF"
+  },
+  "r91": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:12+02:00",
+   "duration_s": 2.23,
+   "annotator": "RF"
+  },
+  "r92": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:22+02:00",
+   "duration_s": 7.63,
+   "annotator": "RF"
+  },
+  "r93": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:27+02:00",
+   "duration_s": 5.17,
+   "annotator": "RF"
+  },
+  "r94": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:29+02:00",
+   "duration_s": 2.9,
+   "annotator": "RF"
+  },
+  "r95": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:31+02:00",
+   "duration_s": 1.51,
+   "annotator": "RF"
+  },
+  "r96": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:47+02:00",
+   "duration_s": 18.02,
+   "annotator": "RF"
+  },
+  "r97": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:54+02:00",
+   "duration_s": 3.59,
+   "annotator": "RF"
+  },
+  "r98": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:27:55+02:00",
+   "duration_s": 1.11,
+   "annotator": "RF"
+  },
+  "r99": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:28:13+02:00",
+   "duration_s": 19.72,
+   "annotator": "RF"
+  },
+  "r100": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:28:16+02:00",
+   "duration_s": 3.37,
+   "annotator": "RF"
+  },
+  "r101": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:28:19+02:00",
+   "duration_s": 3.19,
+   "annotator": "RF"
+  },
+  "r102": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:30:40+02:00",
+   "duration_s": 31.65,
+   "annotator": "RF"
+  },
+  "r103": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:30:43+02:00",
+   "duration_s": 3.05,
+   "annotator": "RF"
+  },
+  "r104": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:30:53+02:00",
+   "duration_s": 7.13,
+   "annotator": "RF"
+  },
+  "r105": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:30:58+02:00",
+   "duration_s": 5.26,
+   "annotator": "RF"
+  },
+  "r106": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:30:59+02:00",
+   "duration_s": 0.95,
+   "annotator": "RF"
+  },
+  "r107": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:31:05+02:00",
+   "duration_s": 7.42,
+   "annotator": "RF"
+  },
+  "r108": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:31:07+02:00",
+   "duration_s": 2.31,
+   "annotator": "RF"
+  },
+  "r109": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:31:16+02:00",
+   "duration_s": 9.4,
+   "annotator": "RF"
+  },
+  "r110": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:31:27+02:00",
+   "duration_s": 8.64,
+   "annotator": "RF"
+  },
+  "r111": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:31:30+02:00",
+   "duration_s": 2.49,
+   "annotator": "RF"
+  },
+  "r112": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:31:31+02:00",
+   "duration_s": 1.15,
+   "annotator": "RF"
+  },
+  "r113": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:31:32+02:00",
+   "duration_s": 1.88,
+   "annotator": "RF"
+  },
+  "r114": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:31:33+02:00",
+   "duration_s": 0.89,
+   "annotator": "RF"
+  },
+  "r115": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:32:06+02:00",
+   "duration_s": 17.9,
+   "annotator": "RF"
+  },
+  "r116": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:32:09+02:00",
+   "duration_s": 2.95,
+   "annotator": "RF"
+  },
+  "r117": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:32:12+02:00",
+   "duration_s": 3.48,
+   "annotator": "RF"
+  },
+  "r118": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:32:14+02:00",
+   "duration_s": 1.9,
+   "annotator": "RF"
+  },
+  "r119": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:32:15+02:00",
+   "duration_s": 0.73,
+   "annotator": "RF"
+  },
+  "r120": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:32:17+02:00",
+   "duration_s": 1.91,
+   "annotator": "RF"
+  },
+  "r121": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:32:19+02:00",
+   "duration_s": 2.77,
+   "annotator": "RF"
+  },
+  "r122": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:32:23+02:00",
+   "duration_s": 4.92,
+   "annotator": "RF"
+  },
+  "r123": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T11:32:24+02:00",
+   "duration_s": 1.09,
+   "annotator": "RF"
   }
  },
  "sessions": [
@@ -137,10 +1436,16 @@
   {
    "id": "s-1784105534520-896ufg",
    "start": "2026-07-15T10:52:31+02:00",
-   "end": null,
-   "active_s": 0.0
+   "end": "2026-07-15T10:52:34+02:00",
+   "active_s": 3.2
+  },
+  {
+   "id": "s-1784106286993-7y9f56",
+   "start": "2026-07-15T11:05:05+02:00",
+   "end": "2026-07-15T11:32:07+02:00",
+   "active_s": 1274.5
   }
  ],
- "current_pos": 5,
- "last_saved": "2026-07-15T10:52:31+02:00"
+ "current_pos": 124,
+ "last_saved": "2026-07-15T11:32:24+02:00"
 }
