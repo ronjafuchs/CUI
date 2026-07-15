@@ -1,0 +1,146 @@
+{
+ "id": "re-game-reviews",
+ "name": "RE game reviews",
+ "annotator_id": "RF",
+ "created_at": "2026-07-15T10:50:02+02:00",
+ "csv": {
+  "encoding": "utf-8-sig",
+  "delimiter": ",",
+  "n_rows": 1000,
+  "columns": [
+   "review"
+  ],
+  "sha256": "de347e81b96b142be72d464f855066468efaa3a412fc6bfdca846977aea3348e",
+  "filename": "sample.csv"
+ },
+ "config": {
+  "text_column": "review",
+  "id_column": "",
+  "context_columns": [],
+  "hidden_columns": [],
+  "blind_mode": false,
+  "task_type": "single",
+  "child_multi": false,
+  "output_columns": [
+   "label"
+  ],
+  "allow_edit_existing": false,
+  "unlabeled_detection": {
+   "empty": true,
+   "null": true,
+   "nan": true,
+   "whitespace": true
+  },
+  "resume_mode": "last_visited",
+  "resume_row": 1,
+  "order": {
+   "mode": "original",
+   "seed": 700237
+  },
+  "special_states": {
+   "unsure": false,
+   "skip": false,
+   "invalid": true,
+   "discuss": true,
+   "comment": false
+  },
+  "show_distribution": false,
+  "idle_timeout_seconds": 90,
+  "multi_separator": "|"
+ },
+ "labels": [
+  {
+   "id": "L1784105206814-0",
+   "name": "NEED",
+   "definition": "a user need is present in the review",
+   "instructions": "",
+   "examples": "",
+   "color": "#14685f",
+   "shortcut": "1",
+   "parent": null
+  },
+  {
+   "id": "L1784105206814-1",
+   "name": "NO_NEED",
+   "definition": "no user need is present in the review",
+   "instructions": "",
+   "examples": "",
+   "color": "#8a4f9e",
+   "shortcut": "2",
+   "parent": null
+  }
+ ],
+ "annotations": {
+  "r0": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T10:50:52+02:00",
+   "duration_s": 16.32,
+   "annotator": "RF"
+  },
+  "r1": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T10:50:53+02:00",
+   "duration_s": 1.87,
+   "annotator": "RF"
+  },
+  "r2": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T10:50:57+02:00",
+   "duration_s": 3.45,
+   "annotator": "RF"
+  },
+  "r3": {
+   "labels": [
+    "NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T10:51:53+02:00",
+   "duration_s": 52.48,
+   "annotator": "RF"
+  },
+  "r4": {
+   "labels": [
+    "NO_NEED"
+   ],
+   "levels": {},
+   "status": "labeled",
+   "comment": "",
+   "timestamp": "2026-07-15T10:51:57+02:00",
+   "duration_s": 3.92,
+   "annotator": "RF"
+  }
+ },
+ "sessions": [
+  {
+   "id": "s-1784105384681-15jyq4",
+   "start": "2026-07-15T10:50:02+02:00",
+   "end": "2026-07-15T10:52:28+02:00",
+   "active_s": 93.2
+  },
+  {
+   "id": "s-1784105534520-896ufg",
+   "start": "2026-07-15T10:52:31+02:00",
+   "end": "2026-07-15T10:52:34+02:00",
+   "active_s": 3.2
+  }
+ ],
+ "current_pos": 5,
+ "last_saved": "2026-07-15T10:52:34+02:00"
+}
