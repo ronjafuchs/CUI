@@ -1,13 +1,14 @@
 """HTTP API. The server binds to 127.0.0.1 only — nothing is sent anywhere else."""
 from __future__ import annotations
 
+import json
 import os
 import tempfile
 import threading
 
 from flask import Blueprint, current_app, jsonify, request, send_from_directory
 
-from . import csv_loader, exporter, persistence, projects, stats
+from . import csv_loader, exporter, persistence, projects, sharing, stats
 
 api = Blueprint("api", __name__)
 
@@ -34,6 +35,11 @@ def _err(message, code=400):
 
 @api.errorhandler(projects.ProjectError)
 def _project_err(e):
+    return _err(str(e))
+
+
+@api.errorhandler(sharing.PackageError)
+def _package_err(e):
     return _err(str(e))
 
 
@@ -100,9 +106,132 @@ def create_project():
         )
     except persistence.SaveError as e:
         return _err(str(e), 500)
+    _drop_import_sidecar(tmp)  # imported package, started fresh
     with _lock:
         _open_projects[proj.state["id"]] = proj
     return jsonify({"id": proj.state["id"]})
+
+
+# ------------------------------------------------------------- share/import
+def _sidecar(tmp):
+    return tmp + ".import.json"
+
+
+def _drop_import_sidecar(tmp):
+    try:
+        os.unlink(_sidecar(tmp))
+    except FileNotFoundError:
+        pass
+
+
+@api.post("/projects/<pid>/share")
+def share_project(pid):
+    """Write one .zip with CSV, config, labels (and optionally annotations)."""
+    proj = _get_project(pid)
+    d = request.get_json(silent=True) or {}
+    try:
+        result = sharing.build_package(proj, bool(d.get("include_annotations")))
+    except sharing.PackageError as e:
+        return _err(str(e), 500)
+    return jsonify(result)
+
+
+@api.post("/import/inspect")
+def import_inspect():
+    """Check an uploaded project package and stage its CSV like /csv/preview.
+
+    The response prefills the setup wizard; temp_id works with the normal
+    /csv/validate and POST /projects endpoints.
+    """
+    f = request.files.get("file")
+    if not f or not f.filename:
+        return _err("No file received. Choose a project .zip file first.")
+    root = _root()
+    fd, zpath = tempfile.mkstemp(suffix=".zip", dir=root)
+    os.close(fd)
+    try:
+        f.save(zpath)
+        manifest, csv_tmp, warnings = sharing.read_package(zpath, root)
+    finally:
+        os.unlink(zpath)
+
+    try:
+        df, info = csv_loader.load_dataframe(csv_tmp)
+        labels = sharing.sanitize_labels(manifest.get("labels"))
+    except Exception as e:
+        os.unlink(csv_tmp)
+        if isinstance(e, sharing.PackageError):
+            raise
+        return _err(f"Could not read the CSV inside the package: {e}")
+    config = sharing.sanitize_config(manifest.get("config"))
+
+    csv_meta = manifest.get("csv") if isinstance(manifest.get("csv"), dict) else {}
+    info.filename = os.path.basename(sharing._s(csv_meta.get("filename"), 255)) or "data.csv"
+    if csv_meta.get("columns") not in (None, info.columns):
+        warnings.append("The CSV columns differ from the exported project. "
+                        "Check the column choices before you start.")
+
+    result = sharing.summary(manifest, info.to_dict(), labels, config, warnings)
+    if result["includes_annotations"]:
+        with open(_sidecar(csv_tmp), "w", encoding="utf-8") as fh:
+            json.dump({
+                "name": result["name"],
+                "csv_filename": info.filename,
+                "hash_ok": manifest.get("_csv_hash_ok", False),
+                "config": config,
+                "labels": labels,
+                "annotations": manifest.get("annotations"),
+                "sessions": manifest.get("sessions"),
+                "current_pos": manifest.get("current_pos"),
+            }, fh, ensure_ascii=False)
+    result["temp_id"] = os.path.basename(csv_tmp)
+    result["preview"] = csv_loader.preview(df)
+    return jsonify(result)
+
+
+@api.post("/import")
+def import_with_annotations():
+    """Create a project straight from a package, keeping its annotations."""
+    d = request.get_json(force=True)
+    root = _root()
+    temp_id = os.path.basename(d.get("temp_id") or "")
+    tmp = os.path.join(root, temp_id)
+    if not temp_id or not os.path.exists(tmp) or not os.path.exists(_sidecar(tmp)):
+        return _err("The imported package expired. Import the .zip file again.", 410)
+    with open(_sidecar(tmp), encoding="utf-8") as fh:
+        pkg = json.load(fh)
+    if not pkg.get("hash_ok"):
+        return _err("The CSV inside the package was changed after it was exported, so "
+                    "its annotations can't be matched to rows safely. Choose "
+                    "“Start fresh” instead.")
+
+    df, info = csv_loader.load_dataframe(tmp)
+    info.filename = pkg["csv_filename"]
+    config, labels = pkg["config"], pkg["labels"]
+    check = csv_loader.validate_csv(df, info, config)
+    if check["errors"]:
+        return jsonify({"error": "The imported setup does not fit its CSV: "
+                        + " ".join(check["errors"]), "validation": check}), 400
+    try:
+        proj = projects.Project.create(
+            root, (d.get("name") or "").strip() or pkg["name"],
+            (d.get("annotator_id") or "").strip(), tmp, info.to_dict(), config, labels,
+        )
+        annotations, dropped = sharing.sanitize_annotations(
+            pkg.get("annotations"), set(proj._uids))
+        proj.state["annotations"] = annotations
+        proj.state["sessions"] = sharing.sanitize_sessions(pkg.get("sessions"))
+        pos = pkg.get("current_pos")
+        if isinstance(pos, int) and 0 <= pos < len(proj._order):
+            proj.state["current_pos"] = pos
+        proj.save()
+    except persistence.SaveError as e:
+        return _err(str(e), 500)
+    _drop_import_sidecar(tmp)
+    with _lock:
+        _open_projects[proj.state["id"]] = proj
+    return jsonify({"id": proj.state["id"], "n_annotations": len(annotations),
+                    "n_dropped": dropped})
 
 
 @api.get("/projects/<pid>")

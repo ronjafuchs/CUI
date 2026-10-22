@@ -34,6 +34,9 @@ export const api = {
   exportCsv: (id, options) => req("POST", `/api/projects/${id}/export`, options),
   exportStats: (id, options) => req("POST", `/api/projects/${id}/export_stats`, options),
   stats: (id) => req("GET", `/api/projects/${id}/stats`),
+  shareProject: (id, options) => req("POST", `/api/projects/${id}/share`, options),
+  inspectPackage: (file) => { const f = new FormData(); f.append("file", file); return req("POST", "/api/import/inspect", f, true); },
+  importWithAnnotations: (payload) => req("POST", "/api/import", payload),
 };
 
 export function el(tag, attrs = {}, ...children) {

@@ -38,11 +38,48 @@ function defaultWiz() {
 let wiz = defaultWiz();
 let mount, onDone;
 
-export function renderSetup(mountEl, onCreated) {
+/** prefill: { pkg, source } from an imported project package (see importer.js) */
+export function renderSetup(mountEl, onCreated, prefill = null) {
   mount = mountEl; onDone = onCreated;
   wiz = defaultWiz();
-  addLabel(null); addLabel(null);
+  if (prefill) applyPrefill(prefill);
+  else { addLabel(null); addLabel(null); }
   draw();
+}
+
+function applyPrefill({ pkg, source }) {
+  const base = wiz.config;
+  const inc = pkg.config || {};
+  wiz.config = {
+    ...base, ...inc,
+    unlabeled_detection: { ...base.unlabeled_detection, ...(inc.unlabeled_detection || {}) },
+    special_states: { ...base.special_states, ...(inc.special_states || {}) },
+    order: { ...base.order, ...(inc.order || {}) },
+    context_columns: [...(inc.context_columns || [])],
+    hidden_columns: [...(inc.hidden_columns || [])],
+    output_columns: [...(inc.output_columns || base.output_columns)],
+    // stored 0-based; the wizard shows and later converts a 1-based number
+    resume_row: (parseInt(inc.resume_row, 10) || 0) + 1,
+  };
+  wiz.name = pkg.name;
+  wiz.annotator = "";
+  wiz.tempId = pkg.temp_id;
+  wiz.csvFilename = pkg.info.filename;
+  wiz.csvInfo = pkg.info;
+  wiz.preview = pkg.preview;
+  wiz.labels = pkg.labels.map(l => ({ ...l, parent: l.parent || null }));
+  wiz.hierarchyOn = wiz.config.task_type.startsWith("hier");
+  wiz.imported = { source, by: pkg.exported_by || "" };
+}
+
+function goToStep(i) {
+  if (i > wiz.step) {
+    for (let j = wiz.step; j < i; j++) {
+      const err = checkStep(j);
+      if (err) { wiz.step = j; draw(); toast(err); return; }
+    }
+  }
+  wiz.step = i; draw();
 }
 
 // ---------------------------------------------------------------- labels
@@ -63,9 +100,18 @@ function addLabel(parentId) {
 function draw() {
   mount.innerHTML = "";
   const pills = el("div", { class: "steps" },
-    STEPS.map((s, i) => el("span", {
-      class: `step-pill ${i === wiz.step ? "active" : i < wiz.step ? "done" : ""}`
-    }, `${i + 1} · ${s}`)));
+    STEPS.map((s, i) => {
+      const pill = el("span", {
+        class: `step-pill ${i === wiz.step ? "active" : i < wiz.step ? "done" : ""}`,
+        role: "button", tabindex: "0", title: `Go to step ${i + 1}`,
+      }, `${i + 1} · ${s}`);
+      pill.addEventListener("click", () => goToStep(i));
+      pill.addEventListener("keydown", e => { if (e.key === "Enter") goToStep(i); });
+      return pill;
+    }));
+  const importNote = wiz.imported ? el("div", { class: "alert ok", style: "margin-top:0" },
+    `Imported from ${wiz.imported.source}` + (wiz.imported.by ? `, shared by ${wiz.imported.by}` : "") + ". ",
+    "Everything is filled in: add your annotator ID in step 1, change labels in step 4 if you need to, then start from step 5.") : "";
   const body = el("div", {});
   [stepProject, stepData, stepColumns, stepLabels, stepBehavior][wiz.step](body);
 
@@ -76,7 +122,8 @@ function draw() {
       : el("button", { class: "primary", onclick: validateAndCreate }, "Validate & start labeling"));
 
   mount.append(el("div", { class: "page" },
-    el("h1", {}, "New labeling project"), pills, body, nav));
+    el("h1", {}, wiz.imported ? "Imported labeling project" : "New labeling project"),
+    pills, importNote, body, nav));
 }
 function back() { wiz.step = Math.max(0, wiz.step - 1); draw(); }
 function next() {
@@ -142,7 +189,9 @@ function stepData(body) {
     el("div", { class: "lbl" }, "CSV file"),
     fileInput, status,
     el("div", { class: "hint" },
-      "The file is copied into the local project folder. It is never uploaded anywhere."));
+      wiz.imported
+        ? "This CSV came with the imported project. Choosing another file replaces it, and the shared column and label setup may no longer fit."
+        : "The file is copied into the local project folder. It is never uploaded anywhere."));
   body.append(card);
 
   if (wiz.preview) {
