@@ -62,6 +62,7 @@ function buildShell() {
     L.timerChip,
     el("button", { class: "small", onclick: showStats }, "Statistics"),
     el("button", { class: "small", onclick: showExport }, "Export"),
+    el("button", { class: "small", onclick: showShare, title: "Package this project so someone else can label the same file" }, "Share project"),
     home,
   );
   updateSaveBadge();
@@ -640,6 +641,54 @@ function showExport() {
   ]);
 }
 
+function showShare() {
+  const c = L.counts;
+  const nAnn = c.labeled + c.skipped + c.unsure + c.invalid + c.discuss;
+  const withAnn = el("input", { type: "checkbox" });
+  if (!nAnn) withAnn.disabled = true;
+
+  const doShare = async (close, btn) => {
+    btn.disabled = true;
+    btn.textContent = "Packing…";
+    try {
+      await api.save(L.id, { current_pos: L.pos });
+      const res = await api.shareProject(L.id, { include_annotations: withAnn.checked });
+      close();
+      const mb = (res.size_bytes / 1048576).toFixed(res.size_bytes < 1048576 ? 2 : 1);
+      modal("Project package ready", [
+        el("p", {}, el("a", { href: `/api/projects/${L.id}/exports/${encodeURIComponent(res.filename)}` }, `⬇ Download ${res.filename}`),
+          el("span", { class: "muted" }, ` (${mb} MB)`)),
+        el("p", {}, res.n_annotations
+          ? `Includes the CSV, labels, settings and ${res.n_annotations} annotations.`
+          : "Includes the CSV, labels and settings — no annotations."),
+        el("p", { class: "hint" },
+          "Send this file to the other person. They click Import project on their start screen. " +
+          "It is also saved in this project's exports folder."),
+      ]);
+    } catch (e) {
+      btn.disabled = false;
+      btn.textContent = "Create package";
+      toast(e.message, 6000);
+    }
+  };
+
+  modal("Share project", [
+    el("p", {}, "Creates one .zip file with the CSV, the column setup, the labels and all settings. ",
+      "Someone else imports it with ", el("b", {}, "Import project"),
+      " on their start screen and labels the same file. They can still adjust the labels before they start."),
+    el("label", { class: "check", style: "margin-top:12px" }, withAnn,
+      el("span", {}, el("b", {}, nAnn ? `Include my ${nAnn} annotations` : "Include my annotations (none yet)"),
+        el("span", { class: "hint", style: "display:block" },
+          "Leave this off when others should label independently. Turn it on to hand the project over or move it to another computer."))),
+    el("div", { class: "alert warn" },
+      "The package contains the full CSV, including hidden columns. Only share it with people who may see this data."),
+  ], (close) => {
+    const go = el("button", { class: "primary" }, "Create package");
+    go.addEventListener("click", () => doShare(close, go));
+    return [el("button", { onclick: close }, "Cancel"), go];
+  });
+}
+
 /* --------------------------------------------------------------- keyboard */
 function onKey(e) {
   if (!L) return;
@@ -656,6 +705,8 @@ function onKey(e) {
     return;
   }
   if (typing || mod) return;
+  // A dialog is open (Share, Export, Statistics): don't label the row behind it.
+  if (document.querySelector(".modal-backdrop")) return;
 
   if (e.altKey) {
     const st = L.meta.config.special_states;

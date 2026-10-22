@@ -1,6 +1,7 @@
 import { api, el, toast, fmtTime } from "./api.js";
 import { renderSetup } from "./setup.js";
 import { renderLabeling, destroy as destroyLabeling } from "./labeling.js";
+import { importCard } from "./importer.js";
 
 const screen = document.getElementById("screen");
 document.getElementById("brand").addEventListener("click", goHome);
@@ -32,7 +33,17 @@ async function goHome() {
   const openSetup = () => { clear(); renderSetup(screen, (id) => openProject(id)); };
   newCard.addEventListener("click", openSetup);
   newCard.addEventListener("keydown", e => { if (e.key === "Enter") openSetup(); });
-  grid.append(newCard);
+  grid.append(newCard, importCard({
+    onReview: (pkg, zipName) => {
+      clear();
+      renderSetup(screen, (id) => openProject(id), { pkg, source: zipName });
+    },
+    onImported: async (res) => {
+      await openProject(res.id);
+      toast(`Project imported with ${res.n_annotations} annotations.` +
+        (res.n_dropped ? ` ${res.n_dropped} could not be matched to a row and were left out.` : ""), 7000);
+    },
+  }));
 
   for (const p of projects) {
     if (p.corrupt) {

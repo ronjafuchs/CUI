@@ -136,6 +136,36 @@ counts and percentages, per-label counts, hierarchical label combinations,
 total / average / median labeling time, every session's duration, project
 and export timestamps, and the full label configuration.
 
+### 6. Sharing a project with other annotators
+The app never sends anything over the network, so sharing works with a file
+you pass on yourself (shared drive, email, USB stick).
+
+**Share project** (top bar of the labeling screen) writes one `.zip` into the
+project's `exports/` folder, with a download link. It contains:
+- `data.csv` — a byte-exact copy of the project's CSV, **including hidden
+  columns**, so only share it with people allowed to see the data,
+- `labeler-project.json` — project name, column setup, labels (definitions,
+  instructions, examples, colours, shortcuts), all settings including the
+  random-order seed, and who exported it,
+- optionally your annotations, sessions and last position. Leave this off
+  when others should label independently; turn it on to hand a project over
+  or move it to another computer.
+
+**Import project** (start screen) reads such a `.zip`:
+- **Start fresh** opens the setup wizard with everything filled in. Add your
+  annotator ID, change labels or settings if needed (click a step to jump
+  to it), then start. The CSV is the same file, so exports from everyone
+  line up row by row via the row ID.
+- **Keep the annotations** (only for packages that include them) creates the
+  project as it was, with labels and settings unchanged. Existing
+  annotations keep their original annotator ID; yours get your own, so
+  "Only rows labeled by me" in Export still separates them.
+
+Imported packages are checked before anything is used: the CSV's hash must
+match (otherwise "keep annotations" is refused), sizes are capped, and every
+label, setting and annotation is re-validated. Importing never replaces an
+existing project; a name clash gets a new project folder.
+
 ---
 
 ## Project layout
@@ -151,6 +181,7 @@ csv-labeler/
 │   ├── persistence.py      atomic saves, backups, crash recovery
 │   ├── exporter.py         labeled-CSV export
 │   ├── stats.py            statistics reports (TXT / JSON)
+│   ├── sharing.py          project packages: share (.zip) & import
 │   └── routes.py           HTTP API
 ├── static/                 frontend (no build step, no CDN, fully offline)
 │   ├── index.html
@@ -159,6 +190,7 @@ csv-labeler/
 │       ├── main.js         routing + project list
 │       ├── setup.js        setup wizard
 │       ├── labeling.js     labeling workbench
+│       ├── importer.js     project import dialog
 │       ├── timer.js        active-time & session tracking
 │       └── api.js          fetch wrapper + DOM helpers
 └── projects/               created at runtime — one folder per project
